@@ -1,4 +1,4 @@
-# Rehan Shaik — Neo-Brutalist Portfolio
+# Rehan Shaik — Portfolio
 
 An ultra-modern, highly interactive personal portfolio engineered for the modern web. Built with a distinctive Neo-Brutalist aesthetic, this project leverages bleeding-edge web technologies to deliver an Awwwards-caliber user experience, complete with 3D rendering, physics-based smooth scrolling, and complex scroll-triggered animations.
 
