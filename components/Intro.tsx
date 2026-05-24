@@ -97,13 +97,13 @@ const Intro = () => {
             </h3>
             <ul className="flex flex-col gap-3">
               <li className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
-                Full Stack Web Development
+                Software Development
               </li>
               <li className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
-                Artificial Intelligence & Automation
+                Building & Scaling Complete Applications
               </li>
               <li className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
-                Data Structures, System Design & Scalable Applications
+                AI Integration & System Architecture
               </li>
             </ul>
           </motion.div>

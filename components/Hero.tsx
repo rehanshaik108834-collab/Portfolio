@@ -125,8 +125,8 @@ export default function Hero() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mt-6 md:mt-12 border-t border-white/20 pt-4 md:pt-8 hero-fade gap-4 md:gap-6">
             <div className="flex-1 max-w-2xl">
               <p className="text-sm sm:text-base md:text-xl lg:text-2xl font-mono text-gray-300 leading-snug mb-4 md:mb-6 uppercase max-w-2xl">
-                FULL-STACK DEVELOPER FOCUSED ON AI, AUTOMATION,
-                AND CREATING PRODUCTS THAT SOLVE REAL PROBLEMS.
+                SOFTWARE DEVELOPER FOCUSED ON BUILDING ROBUST APPLICATIONS,
+                SCALABLE SYSTEMS, AND AI-POWERED SOLUTIONS THAT SOLVE REAL PROBLEMS.
               </p>
             </div>
           </div>

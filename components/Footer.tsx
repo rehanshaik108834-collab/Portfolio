@@ -53,7 +53,7 @@ const Footer = () => {
             Rehan Shaik
           </p>
           <p className="font-sans text-xs md:text-sm font-medium uppercase tracking-wide leading-relaxed text-white/60">
-            Full Stack Engineer
+            Software Developer
           </p>
           <p className="font-sans text-xs md:text-sm font-medium uppercase tracking-wide leading-relaxed text-white/60">
             Andhra Pradesh, India
