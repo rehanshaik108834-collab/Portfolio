@@ -6,20 +6,83 @@ import './WorkGallery.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface Project {
+export interface Project {
   id: number;
   title: string;
   code: string;
   img: string;
+  longDescription?: string;
+  features?: string[];
+  techStack?: { frontend?: string[]; backend?: string[]; other?: string[] };
+  githubLink?: string;
+  liveLink?: string;
 }
 
 const projects: Project[] = [
-  { id: 1, title: "CodePulse", code: "FULL-STACK AI", img: "/image/project-1.png" },
-  { id: 2, title: "RepoMind", code: "FASTAPI / RAG", img: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2670&auto=format&fit=crop" },
-  { id: 3, title: "Lannent", code: "ARCHITECTURE", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2672&auto=format&fit=crop" },
-  { id: 4, title: "Nexora", code: "E-COMMERCE", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" },
-  { id: 5, title: "NexSync", code: "WEB DASHBOARD", img: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=2616&auto=format&fit=crop" },
-  { id: 6, title: "MRI Viz", code: "3D / DATA", img: "https://images.unsplash.com/photo-1515462277126-2dd0c162007a?q=80&w=2670&auto=format&fit=crop" }
+  { 
+    id: 1, 
+    title: "Nexora", 
+    code: "MERN / LMS", 
+    img: "/image/Nexora.png",
+    githubLink: "https://github.com/rehanshaik108834-collab/Online-Learning-Platform",
+    longDescription: "A comprehensive Learning Management System (LMS) built with the MERN stack (MongoDB, Express, React, Node.js). This project enables instructors to create and sell online courses while allowing students to browse, purchase, and track their learning progress.\n\nStudents can browse published courses with advanced filtering, view detailed course information, and securely purchase courses with instant checkout. Instructors can create and manage courses, upload media to Cloudinary, edit course details, publish/unpublish courses, and track student purchases and progress.",
+    features: [
+      "User authentication (signup/login with JWT)",
+      "Browse published courses with advanced filtering and sorting",
+      "Secure course purchase with instant checkout",
+      "Track learning progress per course and lecture",
+      "Instructor dashboard to create and manage courses",
+      "Upload course media (videos, images) to Cloudinary",
+      "Role-Based Access Control (Student vs Instructor)",
+      "Real-time upload progress tracking"
+    ],
+    techStack: {
+      frontend: ["React 18.3.1", "Vite", "React Router v6", "Axios", "Tailwind CSS", "Radix UI", "Framer Motion", "React Player"],
+      backend: ["Express.js", "Node.js", "MongoDB + Mongoose", "JWT + bcryptjs", "Cloudinary SDK", "Multer", "CORS"]
+    }
+  },
+  { 
+    id: 2, 
+    title: "Nutrivo", 
+    code: "AI / NUTRITION", 
+    img: "/image/Nutrivo.png",
+    githubLink: "https://github.com/rehanshaik108834-collab/Nutrivo"
+  },
+  { 
+    id: 3, 
+    title: "Lannent", 
+    code: "GIG PLATFORM", 
+    img: "/image/Lannent.png",
+    githubLink: "https://github.com/IIIT-Sricity-FSD-2024-2028/40_Lannent"
+  },
+  { 
+    id: 4, 
+    title: "CodePulseAI", 
+    code: "FULL-STACK AI", 
+    img: "/image/codepulseai.png",
+    githubLink: "https://github.com/rehanshaik108834-collab/CodePulseAI"
+  },
+  { 
+    id: 5, 
+    title: "Nexsync", 
+    code: "FULL-STACK WEB", 
+    img: "/image/Nexsync.png",
+    githubLink: "https://github.com/rehanshaik108834-collab/nexsync_website"
+  },
+  { 
+    id: 6, 
+    title: "eEmployeeID", 
+    code: "REACT / VITE", 
+    img: "/image/project-1.png",
+    githubLink: "https://github.com/rehanshaik108834-collab/eEmployeeID"
+  },
+  { 
+    id: 7, 
+    title: "Turing Machine Simulator", 
+    code: "REACT / D3", 
+    img: "/image/Turing-Machine-Simulator.png",
+    githubLink: "https://github.com/rehanshaik108834-collab/turing-machine-simulator"
+  }
 ];
 
 const WorkGallery: React.FC = () => {
@@ -240,7 +303,14 @@ const WorkGallery: React.FC = () => {
       
       <div ref={cardsContainerRef} className="cards">
         {projects.map((project) => (
-          <div className="card" key={project.id}>
+          <div 
+            className="card cursor-pointer hover:scale-[1.02] transition-transform duration-300" 
+            key={project.id}
+            onClick={() => {
+              if (project.githubLink) window.open(project.githubLink, '_blank');
+              else if (project.liveLink) window.open(project.liveLink, '_blank');
+            }}
+          >
             <div className="card-img">
               <img src={project.img} alt={project.title} />
             </div>
